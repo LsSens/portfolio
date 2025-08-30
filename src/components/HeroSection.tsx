@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { ArrowDown, Download, Mail, Linkedin, Github } from "lucide-react";
+import { ArrowDown, Download, Mail, Linkedin, Github, MessageCircle } from "lucide-react";
 import { useGitHub } from "@/hooks/useGitHub";
 import { GITHUB_CONFIG } from "@/config/github";
+import SocialButtons from "./SocialButtons";
 
 const HeroSection = () => {
   const { userInfo, loading: userLoading } = useGitHub();
@@ -62,38 +63,7 @@ const HeroSection = () => {
 
             {/* Redes Sociais */}
             <div className="flex justify-center lg:justify-start gap-4 animate-fade-in" style={{ animationDelay: "0.8s" }}>
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="group hover:bg-primary hover:text-primary-foreground transition-smooth"
-                asChild
-              >
-                <a href={GITHUB_CONFIG.USER_PROFILE_URL} target="_blank" rel="noopener noreferrer">
-                  <Github className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-              </Button>
-              
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="group hover:bg-primary hover:text-primary-foreground transition-smooth"
-                asChild
-              >
-                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
-                  <Linkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-              </Button>
-              
-              <Button 
-                variant="ghost" 
-                size="icon" 
-                className="group hover:bg-primary hover:text-primary-foreground transition-smooth"
-                asChild
-              >
-                <a href="mailto:lucas@exemplo.com">
-                  <Mail className="w-5 h-5 group-hover:scale-110 transition-transform" />
-                </a>
-              </Button>
+              <SocialButtons />
             </div>
           </div>
 

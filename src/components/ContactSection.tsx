@@ -1,53 +1,27 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Mail, Phone, MapPin, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
+import SocialButtons from "./SocialButtons";
 
 const ContactSection = () => {
   const contactInfo = [
     {
       icon: Mail,
       label: "Email",
-      value: "joao@exemplo.com",
-      href: "mailto:joao@exemplo.com"
+      value: "lucassenssousa@gmail.com",
+      href: "mailto:lucassenssousa@gmail.com"
     },
     {
       icon: Phone,
       label: "Telefone",
-      value: "+55 (11) 99999-9999",
-      href: "tel:+5511999999999"
+      value: "+55 (13) 98220-1751",
+      href: "tel:+5513982201751"
     },
     {
       icon: MapPin,
       label: "Localização",
-      value: "São Paulo, SP",
-      href: "https://maps.google.com/?q=São+Paulo,SP"
-    }
-  ];
-
-  const socialLinks = [
-    {
-      icon: Github,
-      label: "GitHub",
-      href: "https://github.com",
-      color: "hover:text-gray-900"
-    },
-    {
-      icon: Linkedin,
-      label: "LinkedIn",
-      href: "https://linkedin.com",
-      color: "hover:text-blue-600"
-    },
-    {
-      icon: Twitter,
-      label: "Twitter",
-      href: "https://twitter.com",
-      color: "hover:text-blue-400"
-    },
-    {
-      icon: Mail,
-      label: "Email",
-      href: "mailto:joao@exemplo.com",
-      color: "hover:text-red-500"
+      value: "Santos, SP",
+      href: "https://maps.google.com/?q=Santos,SP"
     }
   ];
 
@@ -90,18 +64,7 @@ const ContactSection = () => {
             <div className="border-t pt-8">
               <h4 className="font-semibold mb-4">Siga-me nas redes sociais</h4>
               <div className="flex space-x-4">
-                {socialLinks.map((social) => (
-                  <a
-                    key={social.label}
-                    href={social.href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className={`p-3 bg-card rounded-full card-shadow hover:card-shadow-hover transition-smooth ${social.color} group`}
-                    title={social.label}
-                  >
-                    <social.icon className="w-5 h-5 group-hover:scale-110 transition-smooth" />
-                  </a>
-                ))}
+                <SocialButtons />
               </div>
             </div>
           </div>
