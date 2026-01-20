@@ -12,7 +12,7 @@
 
 ## 📖 Sobre o Projeto
 
-**Personal Chat Display** é um portfólio pessoal interativo e moderno desenvolvido para Lucas Sens, um desenvolvedor Full Stack apaixonado por criar soluções inovadoras. O projeto combina design responsivo, funcionalidades interativas e integração com APIs externas para criar uma experiência única de apresentação profissional.
+**Personal Chat Display** é um portfólio pessoal interativo e moderno desenvolvido para Lucas Sens, um desenvolvedor Backend apaixonado por criar soluções inovadoras. O projeto combina design responsivo, funcionalidades interativas e integração com APIs externas para criar uma experiência única de apresentação profissional.
 
 ### ✨ Características Principais
 

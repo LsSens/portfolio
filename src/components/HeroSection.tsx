@@ -31,7 +31,7 @@ const HeroSection = () => {
               </h1>
               
               <p className="text-xl md:text-2xl text-muted-foreground animate-fade-in" style={{ animationDelay: "0.2s" }}>
-                {userLoading ? "Carregando..." : userInfo?.bio || "Desenvolvedor Full Stack apaixonado por criar soluções inovadoras"}
+                {userLoading ? "Carregando..." : userInfo?.bio || "Desenvolvedor Backend apaixonado por criar soluções inovadoras"}
               </p>
               
               <p className="text-lg text-muted-foreground animate-fade-in" style={{ animationDelay: "0.4s" }}>

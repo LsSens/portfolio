@@ -40,19 +40,13 @@ const AboutSection = () => {
               Transformando ideias em realidade digital
             </h3>
             <p className="text-muted-foreground mb-6 leading-relaxed">
-              Sou um desenvolvedor full stack com mais de 5 anos de experiência criando 
-              aplicações web modernas e responsivas. Especializado em React, TypeScript 
-              e Node.js, tenho paixão por resolver problemas complexos e criar experiências 
+              Sou um desenvolvedor backend com mais de 5 anos de experiência criando 
+              aplicações modernas. Tenho paixão por resolver problemas complexos e criar experiências 
               de usuário excepcionais.
-            </p>
-            <p className="text-muted-foreground mb-8 leading-relaxed">
-              Acredito que a tecnologia deve ser acessível e intuitiva. Por isso, 
-              foco sempre em entregar soluções que não apenas funcionam perfeitamente, 
-              mas também proporcionam uma experiência agradável para quem as utiliza.
             </p>
             
             <div className="flex flex-wrap gap-3">
-              {["React", "TypeScript", "Node.js", "Python", "PostgreSQL", "Docker"].map((tech) => (
+              {["Node.js", "Python", "PostgreSQL", "Docker"].map((tech) => (
                 <span 
                   key={tech}
                   className="px-3 py-1 bg-primary/10 text-primary rounded-full text-sm font-medium"

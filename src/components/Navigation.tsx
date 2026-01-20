@@ -37,7 +37,7 @@ const Navigation = () => {
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 px-4 md:px-8 lg:px-16">
           <div className="text-xl font-bold text-foreground">
-            Lucas<span className="text-primary">.</span>
+            Sens<span className="text-primary">.</span>
           </div>
 
           <div className="hidden md:flex items-center space-x-8">

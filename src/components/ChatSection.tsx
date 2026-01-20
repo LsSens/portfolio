@@ -16,7 +16,7 @@ const ChatSection = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
       id: 1,
-      text: "Olá! Sou o Lucas Sens, desenvolvedor full stack. Pode me perguntar qualquer coisa sobre minha experiência, projetos, tecnologias que uso, ou qualquer outra dúvida que tenha!",
+      text: "Olá! Sou o Lucas Sens, desenvolvedor backend. Pode me perguntar qualquer coisa sobre minha experiência, projetos, tecnologias que uso, ou qualquer outra dúvida que tenha!",
       isUser: false,
       timestamp: new Date()
     }
@@ -58,7 +58,7 @@ const ChatSection = () => {
     setMessages([
       {
         id: 1,
-        text: "Olá! Sou o Lucas Sens, desenvolvedor full stack. Pode me perguntar qualquer coisa sobre minha experiência, projetos, tecnologias que uso, ou qualquer outra dúvida que tenha!",
+        text: "Olá! Sou o Lucas Sens, desenvolvedor backend. Pode me perguntar qualquer coisa sobre minha experiência, projetos, tecnologias que uso, ou qualquer outra dúvida que tenha!",
         isUser: false,
         timestamp: new Date()
       }
