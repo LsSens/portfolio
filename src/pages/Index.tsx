@@ -14,7 +14,6 @@ const Index = () => {
         <ContactSection />
       </main>
       
-      {/* Footer */}
       <footer className="bg-primary text-primary-foreground py-8">
         <div className="container-custom text-center">
           <p className="text-sm opacity-90">

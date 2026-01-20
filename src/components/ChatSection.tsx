@@ -81,7 +81,6 @@ const ChatSection = () => {
         </div>
 
         <div className="max-w-4xl mx-auto">
-          {/* Chat Interface */}
           <Card className="border-0 card-shadow animate-fade-in">
             <CardHeader className="bg-gradient-to-r from-primary/5 to-primary/10 border-b">
               <div className="flex items-center justify-between">
@@ -103,7 +102,6 @@ const ChatSection = () => {
             </CardHeader>
 
             <CardContent className="p-0">
-              {/* Messages Area */}
               <div className="h-96 overflow-y-auto p-6 space-y-4">
                 {messages.map((message) => (
                   <div
@@ -158,7 +156,6 @@ const ChatSection = () => {
                 <div ref={messagesEndRef} />
               </div>
 
-              {/* Input Area */}
               <div className="p-6 border-t bg-secondary/20">
                 <div className="flex space-x-3">
                   <input

@@ -9,7 +9,6 @@ const LanguageShowcase = () => {
     <div className="p-6 space-y-6">
       <h3 className="text-lg font-semibold">Demonstração dos Badges de Linguagem</h3>
       
-      {/* Diferentes tamanhos */}
       <div className="space-y-4">
         <h4 className="font-medium">Tamanhos:</h4>
         <div className="flex flex-wrap gap-3">
@@ -19,7 +18,6 @@ const LanguageShowcase = () => {
         </div>
       </div>
 
-      {/* Com e sem ícones */}
       <div className="space-y-4">
         <h4 className="font-medium">Com e sem ícones:</h4>
         <div className="flex flex-wrap gap-3">
@@ -28,7 +26,6 @@ const LanguageShowcase = () => {
         </div>
       </div>
 
-      {/* Todas as linguagens de exemplo */}
       <div className="space-y-4">
         <h4 className="font-medium">Todas as linguagens:</h4>
         <div className="flex flex-wrap gap-2">
@@ -42,7 +39,6 @@ const LanguageShowcase = () => {
         </div>
       </div>
 
-      {/* Linguagens com cores personalizadas */}
       <div className="space-y-4">
         <h4 className="font-medium">Cores personalizadas:</h4>
         <div className="flex flex-wrap gap-2">

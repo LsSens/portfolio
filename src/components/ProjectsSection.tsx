@@ -90,7 +90,6 @@ const ProjectsSection = () => {
                 className="group overflow-hidden card-shadow hover:card-shadow-hover transition-smooth animate-scale-in border-0"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                {/* Header com ícone e indicador de favorito */}
                 <CardHeader className="pb-4">
                   <div className="flex items-start justify-between">
                     <div className="flex items-center gap-3">
@@ -107,7 +106,6 @@ const ProjectsSection = () => {
                       </div>
                     </div>
                     
-                    {/* Indicador de repositório favorito */}
                     <div className="bg-primary text-white p-2 rounded-full">
                       <Star className="w-4 h-4" />
                     </div>
@@ -115,7 +113,6 @@ const ProjectsSection = () => {
                 </CardHeader>
                 
                 <CardContent className="pt-0">
-                  {/* Estatísticas do repositório */}
                   <div className="flex items-center gap-4 mb-6 text-sm text-muted-foreground">
                     <div className="flex items-center gap-2">
                       <Star className="w-4 h-4 text-yellow-500" />
@@ -131,7 +128,6 @@ const ProjectsSection = () => {
                     </div>
                   </div>
 
-                  {/* Tecnologias com ícones e cores */}
                   <div className="flex flex-wrap gap-2 mb-6">
                     {project.technologies.length > 0 ? (
                       project.technologies.map((tech) => (
@@ -150,7 +146,6 @@ const ProjectsSection = () => {
                     )}
                   </div>
 
-                  {/* Topics */}
                   {project.topics.length > 0 && (
                     <div className="flex flex-wrap gap-2 mb-6">
                       {project.topics.slice(0, 4).map((topic) => (
@@ -169,7 +164,6 @@ const ProjectsSection = () => {
                     </div>
                   )}
                   
-                  {/* Botões de ação */}
                   <div className="flex gap-3">
                     {project.liveUrl && (
                       <Button 

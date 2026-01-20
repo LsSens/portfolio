@@ -69,7 +69,6 @@ class GitHubService {
     }
   }
 
-  // Função para formatar os dados do repositório para o formato usado no componente
   formatRepositoryForDisplay(repo: GitHubRepository): FormattedRepository {
     return {
       title: repo.name.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),

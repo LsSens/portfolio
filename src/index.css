@@ -2,10 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
-
 @layer base {
   :root {
     --background: 0 0% 99%;
@@ -36,13 +32,11 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 220 91% 56%;
 
-    /* Custom Portfolio Colors */
     --primary-gradient: linear-gradient(135deg, 220 91% 56%, 260 91% 65%);
     --hero-gradient: linear-gradient(135deg, 220 14% 96%, 0 0% 100%);
     --card-shadow: 0 4px 6px -1px hsl(220 13% 91% / 0.1), 0 2px 4px -1px hsl(220 13% 91% / 0.06);
     --card-shadow-hover: 0 10px 15px -3px hsl(220 13% 91% / 0.1), 0 4px 6px -2px hsl(220 13% 91% / 0.05);
     
-    /* Animation Variables */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     --transition-bounce: all 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 

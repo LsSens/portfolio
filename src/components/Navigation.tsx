@@ -36,12 +36,10 @@ const Navigation = () => {
     }`}>
       <div className="container-custom">
         <div className="flex items-center justify-between h-16 px-4 md:px-8 lg:px-16">
-          {/* Logo */}
           <div className="text-xl font-bold text-foreground">
             Lucas<span className="text-primary">.</span>
           </div>
 
-          {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navItems.map((item) => (
               <button
@@ -55,7 +53,6 @@ const Navigation = () => {
             ))}
           </div>
 
-          {/* CTA Button */}
           <div className="hidden md:block">
             <Button
               onClick={() => scrollToSection("#contact")}
@@ -65,7 +62,6 @@ const Navigation = () => {
             </Button>
           </div>
 
-          {/* Mobile Menu Button */}
           <Button
             variant="ghost"
             size="sm"
@@ -76,7 +72,6 @@ const Navigation = () => {
           </Button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMobileMenuOpen && (
           <div className="md:hidden bg-background/95 backdrop-blur-sm border-t border-border animate-fade-in">
             <div className="px-4 py-4 space-y-4">

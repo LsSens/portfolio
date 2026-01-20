@@ -1,9 +1,34 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Mail, Phone, MapPin } from "lucide-react";
 import SocialButtons from "./SocialButtons";
 
 const ContactSection = () => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    
+    if (!name || !email || !subject || !message) {
+      return;
+    }
+
+    const whatsappNumber = "5513982201751";
+    const whatsappMessage = `Olá, sou ${name}, email: ${email}\n\n${subject}\n${message}`;
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    window.open(whatsappUrl, '_blank');
+    
+    setName("");
+    setEmail("");
+    setSubject("");
+    setMessage("");
+  };
   const contactInfo = [
     {
       icon: Mail,
@@ -74,47 +99,62 @@ const ContactSection = () => {
               <CardTitle>Envie uma Mensagem</CardTitle>
             </CardHeader>
             <CardContent className="space-y-4">
-              <div>
-                <label className="text-sm font-medium mb-2 block">Nome</label>
-                <input
-                  type="text"
-                  className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
-                  placeholder="Seu nome completo"
-                />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium mb-2 block">Email</label>
-                <input
-                  type="email"
-                  className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
-                  placeholder="seu@email.com"
-                />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium mb-2 block">Assunto</label>
-                <input
-                  type="text"
-                  className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
-                  placeholder="Assunto da mensagem"
-                />
-              </div>
-              
-              <div>
-                <label className="text-sm font-medium mb-2 block">Mensagem</label>
-                <textarea
-                  className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth h-32 resize-none"
-                  placeholder="Descreva seu projeto ou ideia..."
-                ></textarea>
-              </div>
-              
-              <Button 
-                className="w-full primary-gradient text-primary-foreground hover:opacity-90 transition-smooth"
-                size="lg"
-              >
-                Enviar Mensagem
-              </Button>
+              <form onSubmit={handleSubmit} className="space-y-4">
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Nome</label>
+                  <input
+                    type="text"
+                    value={name}
+                    onChange={(e) => setName(e.target.value)}
+                    required
+                    className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                    placeholder="Seu nome completo"
+                  />
+                </div>
+                
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Email</label>
+                  <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    required
+                    className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                    placeholder="seu@email.com"
+                  />
+                </div>
+                
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Assunto</label>
+                  <input
+                    type="text"
+                    value={subject}
+                    onChange={(e) => setSubject(e.target.value)}
+                    required
+                    className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth"
+                    placeholder="Assunto da mensagem"
+                  />
+                </div>
+                
+                <div>
+                  <label className="text-sm font-medium mb-2 block">Mensagem</label>
+                  <textarea
+                    value={message}
+                    onChange={(e) => setMessage(e.target.value)}
+                    required
+                    className="w-full p-3 border border-input rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent transition-smooth h-32 resize-none"
+                    placeholder="Descreva seu projeto ou ideia..."
+                  ></textarea>
+                </div>
+                
+                <Button 
+                  type="submit"
+                  className="w-full primary-gradient text-primary-foreground hover:opacity-90 transition-smooth"
+                  size="lg"
+                >
+                  Enviar Mensagem
+                </Button>
+              </form>
             </CardContent>
           </Card>
         </div>
