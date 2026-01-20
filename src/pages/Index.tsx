@@ -17,7 +17,7 @@ const Index = () => {
       <footer className="bg-primary text-primary-foreground py-8">
         <div className="container-custom text-center">
           <p className="text-sm opacity-90">
-            © {new Date().getFullYear()} Lucas Sens. Todos os direitos reservados.
+            © {new Date().getFullYear()} Lucas Sens. Todos os direitos reservados. 
           </p>
         </div>
       </footer>
